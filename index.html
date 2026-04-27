@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OnlyFans — Your Breeze, Your Style</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav id="ff-nav">
+  <div class="ff-logo" onclick="ffPage('home')">Only<span>Fans</span></div>
+  <div class="ff-navlinks">
+    <button onclick="ffPage('home')">Home</button>
+    <button onclick="ffPage('shop')">Shop</button>
+    <button onclick="ffPage('about')">About</button>
+    <button class="cart-nav-btn" onclick="ffPage('shop')">&#128722; Cart <span id="ff-cnt">0</span></button>
+  </div>
+</nav>
+
+<div id="ff-toast"></div>
+
+<div id="ff-home" class="ff-page active">
+  <section class="ff-hero">
+    <div class="ff-hero-txt">
+      <p class="ff-eyebrow">Summer FAN Collection</p>
+      <h2 class="ff-htitle">Stay Cool,<br>Stay <em>Fresh</em></h2>
+      <p class="ff-hsub">Fans, cooling accessories &amp; a summer essential &mdash; ༄</p>
+      <button class="ff-cta" onclick="ffPage('shop')">Shop the Collection &rarr;</button>
+    </div>
+    <div class="ff-hero-img">
+      <img src="images/red.jpg" alt="Hero Fan">
+      <div class="ff-badge">&#9733; Buy<br>Now &#9733;</div>
+    </div>
+  </section>
+  <section class="ff-bs">
+    <div class="ff-sh">
+      <h2 class="ff-stitle">TOP PICKS </h2>
+      <span class="ff-slink" onclick="ffPage('shop')">See all &rarr;</span>
+    </div>
+    <div class="ff-grid" id="ff-bs-grid"></div>
+  </section>
+</div>
+
+<div id="ff-shop" class="ff-page">
+  <div class="shop-top-bar">
+    <div class="ff-shop-hdr">
+      <h2>Our Full Collection</h2>
+      <p>Premium fans and cooling accessories &mdash; for every space and every season.</p>
+    </div>
+  </div>
+  <div class="shop-body">
+    <div class="ff-layout">
+      <div id="ff-all-prods"></div>
+      <div class="ff-cart-panel">
+        <h2>&#128722; Your Cart</h2>
+        <ul id="ff-clist"></ul>
+        <div class="ff-total-container">
+          <span>Total</span><span id="ff-total">&#8369;0.00</span>
+        </div>
+        <div class="co-wrap">
+          <p class="ff-co-ttl">Checkout Details</p>
+          <form id="ff-coform" class="ff-coform" action="http://52.74.133.173/cs3/checkout.php" method="POST">
+            <input type="text" name="cust_name" placeholder="Full Name" required>
+            <input type="text" name="cust_addr" placeholder="Delivery Address" required>
+            <input type="email" name="cust_email" placeholder="Email Address" required>
+            <input type="hidden" name="cust_order" id="ff-hidden-order" value="[]">
+            <button type="submit" class="ff-submit" id="ff-subbtn" disabled>Place Order</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="ff-about" class="ff-page">
+  <div class="about-wrap">
+    <div class="ff-about-hero">
+      <h2>About <em>OnlyFans</em></h2>
+      <p>Born out of a love for staying cool without compromising on style.</p>
+    </div>
+    
+    <h2 class="ff-sec-ttl">Meet the Team</h2>
+    <div class="ff-mgrid">
+      <div class="ff-mcard">
+        <div class="ff-avtr">&#127800;</div>
+        <div class="ff-mname">EJ Sangalang</div>
+        <div class="ff-mrole">Main Developer</div>
+        <p class="ff-mcontrib">Designed website structure and navigation.</p>
+      </div>
+      <div class="ff-mcard">
+        <div class="ff-avtr">&#127799;</div>
+        <div class="ff-mname">Sophia Bognot</div>
+        <div class="ff-mrole">Developer & Designer </div>
+        <p class="ff-mcontrib">Responsible for visual design and typography.</p>
+      </div>
+      <div class="ff-mcard">
+        <div class="ff-avtr">&#127802;</div>
+        <div class="ff-mname">Rich Maquesias</div>
+        <div class="ff-mrole">Developer & Content Strategist</div>
+        <p class="ff-mcontrib">Developed Homescreen, wrote descriptions, researched pricing, and organized the four product categories.</p>
+      </div>
+    </div>
+
+    <h2 class="ff-sec-ttl">References</h2>
+    <ul class="ff-refs">
+      <li>Hanabishi Official Store &mdash; product images &amp; pricing <br><a href="https://myhanabishi.com" target="_blank">https://myhanabishi.com</a></li>
+      <li>Jisulife Official Store &mdash; mini fan images &amp; pricing <br><a href="https://jisulife.com" target="_blank">https://jisulife.com</a></li>
+      <li>Pinterest &mdash; inspirational product photography <br><a href="https://pinterest.com" target="_blank">https://pinterest.com</a></li>
+      <li>Google Fonts &mdash; Playfair Display &amp; DM Sans <br><a href="https://fonts.google.com" target="_blank">https://fonts.google.com</a></li>
+      <li>W3C HTML Validator &mdash; markup validation <br><a href="https://validator.w3.org" target="_blank">https://validator.w3.org</a></li>
+    </ul>
+  </div>
+</div>
+
+<footer>&copy; 2026 <span onclick="ffPage('home')" style="cursor:pointer">OnlyFans</span> &mdash; Sangalang, Bognot, Maquesias</footer>
+<script src="styles.js"></script>
+</body>
+</html>
